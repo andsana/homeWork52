@@ -1,9 +1,9 @@
 import './App.css';
-import Card from './card';
+import MyCard from './MyCard';
 
 function App() {
   return (
-    <Card rank="A" suit="diams" />
+    <MyCard rank="A" suit="diams" />
   );
 }
 
