@@ -6,22 +6,22 @@ interface Props {
     suit: string;
 }
 
-const getSuitSymbol = (suit: string) => {
-    switch (suit) {
-        case 'diams':
-            return '♦';
-        case 'hearts':
-            return '♥';
-        case 'clubs':
-            return '♣';
-        case 'spades':
-            return '♠';
-        default:
-            return '';
-    }
-};
-
 const MyCard: React.FC<Props> = ({rank, suit}) => {
+    const getSuitSymbol = (suit: string) => {
+        switch (suit) {
+            case 'diams':
+                return '♦';
+            case 'hearts':
+                return '♥';
+            case 'clubs':
+                return '♣';
+            case 'spades':
+                return '♠';
+            default:
+                return '';
+        }
+    };
+
     return (
         <span className={`card rank-${rank} ${suit}`}>
       <span className="rank">{rank}</span>
